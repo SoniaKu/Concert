@@ -1,0 +1,24 @@
+<template>
+  <lightning-card title="Hello" icon-name="custom:custom14">
+      <div class="slds-m-around_medium">
+        <p>Add Concert</p>
+        <lightning-input label="Name" value={concertName} onchange={changeConName}></lightning-input>
+        <lightning-input label="Date" value={concertDate} onchange={changeConDate}></lightning-input>
+        <lightning-input label="Location" value={concertLocation} onchange={changeConLocation}></lightning-input>
+        <lightning-input label="Description" value={concertDescription} onchange={changeConDescription}></lightning-input>
+       
+        <p>Add Attendee</p>
+        <div style = "color:red;"> 
+          {errorMsg}
+        </div>
+        <lightning-input label="First Name" value={firstNameWjs} onchange={changeFirstName}></lightning-input>
+        <lightning-input label="Last Name" value={lastName} onchange={changeLastName}></lightning-input>
+        <lightning-input label="Birth Date" value={birthDate} onchange={changeBDate}></lightning-input>
+       <lightning-input label="Email" value={email} onchange={changeEmail}></lightning-input>
+         
+       <lightning-button class="slds-m-top_small" variant="brand" name="save" label="Save" onclick={saveUser}>
+                </lightning-button>
+      </div>
+    
+    </lightning-card>
+  </template>
